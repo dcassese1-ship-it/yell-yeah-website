@@ -1,26 +1,122 @@
 @import "tailwindcss";
+@import "@fontsource/bebas-neue";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/inter/800.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-ink: #0a1330;
+  --color-navy: #14235c;
+  --color-paper: #faf6ec;
+  --color-cream: #fffdf7;
+  --color-yell: #ffce1a;
+  --color-punch: #ff4d6d;
+  --color-court: #12b886;
+  --color-line: #0a1330;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--color-ink);
+  --color-navy: var(--color-navy);
+  --color-paper: var(--color-paper);
+  --color-cream: var(--color-cream);
+  --color-yell: var(--color-yell);
+  --color-punch: var(--color-punch);
+  --color-court: var(--color-court);
+  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--color-ink);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+/* Loud, hand-shouted headline treatment */
+.shout {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+}
+
+.text-outline {
+  -webkit-text-stroke: 2px var(--color-ink);
+  color: transparent;
+}
+
+/* Marquee ticker */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Hard, sticker-like drop shadow used throughout */
+.pop-shadow {
+  box-shadow: 6px 6px 0px 0px var(--color-ink);
+}
+
+.pop-shadow-sm {
+  box-shadow: 4px 4px 0px 0px var(--color-ink);
+}
+
+.btn-hard {
+  border: 2px solid var(--color-ink);
+  box-shadow: 4px 4px 0px 0px var(--color-ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-hard:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px var(--color-ink);
+}
+
+.btn-hard:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px var(--color-ink);
+}
+
+.card-hard {
+  border: 2px solid var(--color-ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-hard:hover {
+  transform: translate(-2px, -4px);
+  box-shadow: 6px 8px 0px 0px var(--color-ink);
+}
+
+.bg-dots {
+  background-image: radial-gradient(var(--color-ink) 1px, transparent 1px);
+  background-size: 18px 18px;
 }
