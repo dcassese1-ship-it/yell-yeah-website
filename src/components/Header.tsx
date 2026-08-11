@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const NAV_LINKS = [
@@ -10,8 +11,17 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b-2 border-ink bg-cream/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <Link href="/" className="font-display shout text-3xl tracking-wide text-ocean sm:text-4xl">
-          Yell<span className="text-teal">Yeah</span>
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/images/logo.png"
+            alt="Yell Yeah Pickleball"
+            width={144}
+            height={144}
+            className="h-11 w-11"
+          />
+          <span className="font-display shout text-3xl tracking-wide text-ocean sm:text-4xl">
+            Yell<span className="text-teal">Yeah</span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 sm:flex">
