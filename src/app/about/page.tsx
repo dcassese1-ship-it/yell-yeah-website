@@ -1,5 +1,27 @@
+import Image from "next/image";
 import Link from "next/link";
 import MarqueeBanner from "@/components/MarqueeBanner";
+import { tileColorForHandle } from "@/lib/format";
+
+const MERCH_SPOTLIGHTS = [
+  { id: "merch-1", caption: "Tag us @yellyeahpickleball" },
+  { id: "merch-2", caption: "Tag us @yellyeahpickleball" },
+  { id: "merch-3", caption: "Tag us @yellyeahpickleball" },
+  { id: "merch-4", caption: "Tag us @yellyeahpickleball" },
+];
+
+const SOCIALS = [
+  {
+    name: "TikTok",
+    href: "https://www.tiktok.com/@yellyeahpickleball",
+    bg: "bg-teal",
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/yellyeahpickleball",
+    bg: "bg-ocean",
+  },
+];
 
 export const metadata = {
   title: "About | Yell Yeah Pickleball",
@@ -8,8 +30,19 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div>
-      <section className="bg-dots border-b-2 border-ink bg-paper px-5 py-16 sm:px-8 sm:py-24">
-        <div className="mx-auto max-w-4xl">
+      <section className="relative overflow-hidden border-b-2 border-ink bg-paper px-5 py-16 sm:px-8 sm:py-24">
+        <div className="pointer-events-none absolute inset-0">
+          <Image
+            src="/images/hero-banner.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-right opacity-25"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/70 to-transparent" />
+        </div>
+
+        <div className="relative mx-auto max-w-4xl">
           <h1 className="shout font-display text-6xl sm:text-7xl">
             Where Passion <br /> Meets <span className="text-teal">Paddle</span>
           </h1>
@@ -63,6 +96,52 @@ export default function AboutPage() {
           <Link href="/shop" className="btn-hard bg-volt px-6 py-3 font-display shout text-lg text-ink">
             Shop the Collection
           </Link>
+        </div>
+      </section>
+
+      {/* People wearing merch */}
+      <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
+        <h2 className="shout font-display text-4xl sm:text-5xl">Yell Yeah In The Wild</h2>
+        <p className="mt-2 max-w-xl text-ink/70">
+          Real players, real energy. Send us your on-court fits and we&apos;ll feature them here.
+        </p>
+
+        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+          {MERCH_SPOTLIGHTS.map((spot) => {
+            const tileColor = tileColorForHandle(spot.id);
+            const textOnTile = tileColor === "bg-volt" || tileColor === "bg-mint" ? "text-ink" : "text-cream";
+            return (
+              <div key={spot.id} className="card-hard bg-cream">
+                <div
+                  className={`flex aspect-square w-full items-center justify-center border-b-2 border-ink ${tileColor} ${textOnTile}`}
+                >
+                  <span className="font-display shout text-3xl opacity-90">YY</span>
+                </div>
+                <p className="p-3 text-center text-xs text-ink/70">{spot.caption}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Social strip */}
+      <section className="border-t-2 border-ink bg-ink py-16">
+        <div className="mx-auto max-w-4xl px-5 sm:px-8">
+          <h2 className="shout font-display text-4xl text-cream sm:text-5xl">Get Loud With Us</h2>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            {SOCIALS.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                className={`card-hard block ${social.bg} p-6 text-cream`}
+              >
+                <p className="font-display shout text-3xl">{social.name}</p>
+                <p className="mt-2 font-display shout text-sm text-volt">Follow the Energy →</p>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
     </div>
