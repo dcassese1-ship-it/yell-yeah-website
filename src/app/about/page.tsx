@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import HeroBackdrop from "@/components/HeroBackdrop";
 import MarqueeBanner from "@/components/MarqueeBanner";
 import { tileColorForHandle } from "@/lib/format";
 
@@ -31,16 +31,7 @@ export default function AboutPage() {
   return (
     <div>
       <section className="relative overflow-hidden border-b-2 border-ink bg-paper px-5 py-16 sm:px-8 sm:py-24">
-        <div className="pointer-events-none absolute inset-0">
-          <Image
-            src="/images/hero-banner.jpg"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover object-right opacity-25"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/70 to-transparent" />
-        </div>
+        <HeroBackdrop />
 
         <div className="relative mx-auto max-w-4xl">
           <h1 className="shout font-display text-6xl sm:text-7xl">
