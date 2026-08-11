@@ -39,8 +39,8 @@ export default function PrivacyPage() {
           <h2 className="font-display shout text-2xl text-ocean">Contact Us</h2>
           <p className="mt-2 leading-relaxed">
             [Placeholder] Questions about this policy can be sent to{" "}
-            <a href="mailto:hello@yellyeahpickleball.com" className="text-teal hover:underline">
-              hello@yellyeahpickleball.com
+            <a href="mailto:yellyeahgear@gmail.com" className="text-teal hover:underline">
+              yellyeahgear@gmail.com
             </a>
             .
           </p>

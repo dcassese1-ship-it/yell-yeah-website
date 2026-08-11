@@ -23,7 +23,7 @@ export default function ContactPage() {
         <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="order-2 grid gap-10 sm:grid-cols-2 lg:order-1">
             <form
-              action="mailto:hello@yellyeahpickleball.com"
+              action="mailto:yellyeahgear@gmail.com"
               method="GET"
               encType="text/plain"
               className="card-hard flex flex-col gap-4 bg-cream p-6"
@@ -62,8 +62,8 @@ export default function ContactPage() {
             <div className="flex flex-col gap-6">
               <div>
                 <p className="font-display shout text-lg text-ocean">Email</p>
-                <a href="mailto:hello@yellyeahpickleball.com" className="text-ink/80 hover:text-teal">
-                  hello@yellyeahpickleball.com
+                <a href="mailto:yellyeahgear@gmail.com" className="text-ink/80 hover:text-teal">
+                  yellyeahgear@gmail.com
                 </a>
               </div>
               <div>
