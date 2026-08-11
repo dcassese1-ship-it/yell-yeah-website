@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import MarqueeBanner from "@/components/MarqueeBanner";
 import ProductGrid from "@/components/ProductGrid";
@@ -9,23 +10,33 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-dots relative overflow-hidden border-b-2 border-ink bg-paper">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-          <p className="font-display shout mb-3 inline-block border-2 border-ink bg-yell px-3 py-1 text-sm">
+      <section className="relative overflow-hidden border-b-2 border-ink">
+        <Image
+          src="/images/hero-banner.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-ink/35" />
+
+        <div className="relative z-10 mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+          <p className="font-display shout mb-3 inline-block border-2 border-ink bg-volt px-3 py-1 text-sm text-ink">
             New Drop Loading
           </p>
-          <h1 className="shout font-display text-6xl text-ink sm:text-8xl">
+          <h1 className="shout font-display text-6xl text-cream sm:text-8xl">
             Game Loud.
             <br />
-            <span className="text-punch">Play</span>{" "}
+            <span className="text-teal">Play</span>{" "}
             <span className="text-outline">Hard.</span>
           </h1>
-          <p className="mt-6 max-w-lg text-lg text-ink/80">
+          <p className="mt-6 max-w-lg text-lg text-cream/90">
             Where passion meets paddle. Bold gear for players who bring the energy to every
             rally — on the court and off.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/shop" className="btn-hard bg-punch px-7 py-3 font-display shout text-xl text-cream">
+            <Link href="/shop" className="btn-hard bg-teal px-7 py-3 font-display shout text-xl text-cream">
               Shop the Drop
             </Link>
             <Link href="/about" className="btn-hard bg-cream px-7 py-3 font-display shout text-xl text-ink">
@@ -41,7 +52,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <div className="mb-8 flex items-end justify-between">
           <h2 className="shout font-display text-4xl sm:text-5xl">Fan Favorites</h2>
-          <Link href="/shop" className="font-display shout text-lg text-punch hover:underline">
+          <Link href="/shop" className="font-display shout text-lg text-teal hover:underline">
             View All →
           </Link>
         </div>
@@ -51,10 +62,10 @@ export default function Home() {
       <MarqueeBanner tone="light" items={["FREE SHIPPING $75+", "NEW PRINTFUL DROP COMING SOON", "MADE FOR LOUD PLAYERS"]} />
 
       {/* Brand story teaser */}
-      <section className="border-t-2 border-ink bg-navy py-16 text-cream">
+      <section className="border-t-2 border-ink bg-ocean py-16 text-cream">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:grid-cols-2 sm:px-8">
           <div>
-            <h2 className="shout font-display text-4xl text-yell sm:text-5xl">
+            <h2 className="shout font-display text-4xl text-volt sm:text-5xl">
               Bold Gear for a Loud Game
             </h2>
             <p className="mt-4 text-cream/80">
@@ -65,14 +76,14 @@ export default function Home() {
             </p>
             <Link
               href="/about"
-              className="btn-hard mt-6 inline-block bg-yell px-6 py-3 font-display shout text-lg text-ink"
+              className="btn-hard mt-6 inline-block bg-volt px-6 py-3 font-display shout text-lg text-ink"
             >
               Meet The Brand
             </Link>
           </div>
           <div className="flex flex-col justify-center gap-4">
             <div className="card-hard bg-cream p-6 text-ink">
-              <p className="font-display shout text-2xl text-punch">Follow the Energy</p>
+              <p className="font-display shout text-2xl text-teal">Follow the Energy</p>
               <p className="mt-2 text-sm text-ink/70">
                 Catch every smash, dink, and celebration on TikTok.
               </p>
@@ -80,7 +91,7 @@ export default function Home() {
                 href="https://www.tiktok.com/@yellyeahpickleball"
                 target="_blank"
                 rel="noreferrer"
-                className="mt-3 inline-block font-display shout text-lg text-navy hover:text-punch"
+                className="mt-3 inline-block font-display shout text-lg text-ocean hover:text-teal"
               >
                 @yellyeahpickleball →
               </a>

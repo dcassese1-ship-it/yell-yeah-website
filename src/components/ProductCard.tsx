@@ -4,7 +4,7 @@ import { formatMoney, tileColorForHandle } from "@/lib/format";
 
 export default function ProductCard({ product }: { product: Product }) {
   const tileColor = tileColorForHandle(product.handle);
-  const textOnTile = tileColor === "bg-yell" ? "text-ink" : "text-cream";
+  const textOnTile = tileColor === "bg-volt" || tileColor === "bg-mint" ? "text-ink" : "text-cream";
   const hasLink = Boolean(product.printfulUrl);
 
   const media = (
@@ -40,7 +40,7 @@ export default function ProductCard({ product }: { product: Product }) {
   const body = (
     <div className="p-4">
       <p className="font-display shout text-xl leading-tight">{product.title}</p>
-      <p className="mt-1 font-display shout text-lg text-punch">{formatMoney(product.price)}</p>
+      <p className="mt-1 font-display shout text-lg text-teal">{formatMoney(product.price)}</p>
     </div>
   );
 

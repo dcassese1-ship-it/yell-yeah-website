@@ -13,7 +13,7 @@ export default function MarqueeBanner({
   tone?: "dark" | "light";
 }) {
   const doubled = [...items, ...items];
-  const bg = tone === "dark" ? "bg-ink text-cream" : "bg-yell text-ink";
+  const bg = tone === "dark" ? "bg-ink text-cream" : "bg-volt text-ink";
 
   return (
     <div className={`overflow-hidden border-y-2 border-ink py-3 ${bg}`}>
@@ -21,7 +21,7 @@ export default function MarqueeBanner({
         {doubled.map((item, i) => (
           <span key={i} className="mx-4 flex items-center font-display shout text-xl sm:text-2xl">
             {item}
-            <span className="mx-4 inline-block h-2 w-2 rounded-full bg-punch" aria-hidden />
+            <span className="mx-4 inline-block h-2 w-2 rounded-full bg-teal" aria-hidden />
           </span>
         ))}
       </div>

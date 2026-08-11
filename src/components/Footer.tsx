@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-ink bg-navy text-cream">
+    <footer className="border-t-2 border-ink bg-ocean text-cream">
       <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8">
         <div className="grid gap-10 sm:grid-cols-3">
           <div>
             <p className="font-display shout text-4xl">
-              Yell<span className="text-yell">Yeah</span>
+              Yell<span className="text-volt">Yeah</span>
             </p>
             <p className="mt-3 max-w-xs text-sm text-cream/70">
               Bold gear for a loud game. Pickleball apparel made for players who show up with
@@ -16,20 +16,20 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="font-display shout text-lg text-yell">Shop</p>
+            <p className="font-display shout text-lg text-volt">Shop</p>
             <ul className="mt-3 space-y-2 text-sm text-cream/80">
               <li>
-                <Link href="/shop" className="hover:text-yell">
+                <Link href="/shop" className="hover:text-volt">
                   All Products
                 </Link>
               </li>
               <li>
-                <Link href="/shop?category=shirt" className="hover:text-yell">
+                <Link href="/shop?category=shirt" className="hover:text-volt">
                   Shirts
                 </Link>
               </li>
               <li>
-                <Link href="/shop?category=hat" className="hover:text-yell">
+                <Link href="/shop?category=hat" className="hover:text-volt">
                   Hats
                 </Link>
               </li>
@@ -37,20 +37,20 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="font-display shout text-lg text-yell">Yell Yeah</p>
+            <p className="font-display shout text-lg text-volt">Yell Yeah</p>
             <ul className="mt-3 space-y-2 text-sm text-cream/80">
               <li>
-                <Link href="/about" className="hover:text-yell">
+                <Link href="/about" className="hover:text-volt">
                   Story
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-yell">
+                <Link href="/contact" className="hover:text-volt">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="hover:text-yell">
+                <Link href="/privacy" className="hover:text-volt">
                   Privacy
                 </Link>
               </li>
@@ -59,7 +59,7 @@ export default function Footer() {
                   href="https://www.tiktok.com/@yellyeahpickleball"
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:text-yell"
+                  className="hover:text-volt"
                 >
                   TikTok
                 </a>

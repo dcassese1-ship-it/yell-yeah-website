@@ -10,7 +10,7 @@ export default function PrivacyPage() {
 
       <div className="mt-10 space-y-8 text-ink/80">
         <section>
-          <h2 className="font-display shout text-2xl text-navy">Information We Collect</h2>
+          <h2 className="font-display shout text-2xl text-ocean">Information We Collect</h2>
           <p className="mt-2 leading-relaxed">
             [Placeholder] We collect information you provide directly to us, such as your name
             and email address when you contact us, along with basic analytics about how visitors
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="font-display shout text-2xl text-navy">How We Use Information</h2>
+          <h2 className="font-display shout text-2xl text-ocean">How We Use Information</h2>
           <p className="mt-2 leading-relaxed">
             [Placeholder] We use the information we collect to respond to inquiries, improve the
             site, and communicate with you.
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="font-display shout text-2xl text-navy">Purchases &amp; Printful</h2>
+          <h2 className="font-display shout text-2xl text-ocean">Purchases &amp; Printful</h2>
           <p className="mt-2 leading-relaxed">
             [Placeholder] Product purchases are completed on Printful&apos;s platform, not on this
             site. Any payment, shipping, and order information you provide during checkout is
@@ -36,10 +36,10 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="font-display shout text-2xl text-navy">Contact Us</h2>
+          <h2 className="font-display shout text-2xl text-ocean">Contact Us</h2>
           <p className="mt-2 leading-relaxed">
             [Placeholder] Questions about this policy can be sent to{" "}
-            <a href="mailto:hello@yellyeahpickleball.com" className="text-punch hover:underline">
+            <a href="mailto:hello@yellyeahpickleball.com" className="text-teal hover:underline">
               hello@yellyeahpickleball.com
             </a>
             .

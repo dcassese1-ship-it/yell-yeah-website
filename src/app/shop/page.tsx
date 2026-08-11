@@ -36,7 +36,7 @@ export default async function ShopPage(props: PageProps<"/shop">) {
               key={f.label}
               href={href}
               className={`btn-hard px-4 py-2 font-display shout text-lg ${
-                isActive ? "bg-punch text-cream" : "bg-cream text-ink"
+                isActive ? "bg-teal text-cream" : "bg-cream text-ink"
               }`}
             >
               {f.label}

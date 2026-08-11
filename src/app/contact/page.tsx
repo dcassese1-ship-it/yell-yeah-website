@@ -44,25 +44,25 @@ export default function ContactPage() {
               className="border-2 border-ink bg-paper px-3 py-2 outline-none focus:bg-cream"
             />
           </label>
-          <button type="submit" className="btn-hard mt-2 bg-punch px-6 py-3 font-display shout text-lg text-cream">
+          <button type="submit" className="btn-hard mt-2 bg-teal px-6 py-3 font-display shout text-lg text-cream">
             Send It
           </button>
         </form>
 
         <div className="flex flex-col gap-6">
           <div>
-            <p className="font-display shout text-lg text-navy">Email</p>
-            <a href="mailto:hello@yellyeahpickleball.com" className="text-ink/80 hover:text-punch">
+            <p className="font-display shout text-lg text-ocean">Email</p>
+            <a href="mailto:hello@yellyeahpickleball.com" className="text-ink/80 hover:text-teal">
               hello@yellyeahpickleball.com
             </a>
           </div>
           <div>
-            <p className="font-display shout text-lg text-navy">Socials</p>
+            <p className="font-display shout text-lg text-ocean">Socials</p>
             <a
               href="https://www.tiktok.com/@yellyeahpickleball"
               target="_blank"
               rel="noreferrer"
-              className="block text-ink/80 hover:text-punch"
+              className="block text-ink/80 hover:text-teal"
             >
               TikTok — @yellyeahpickleball
             </a>

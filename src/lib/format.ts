@@ -6,7 +6,7 @@ export function formatMoney(amount: number) {
   }).format(amount);
 }
 
-const TILE_PALETTE = ["bg-yell", "bg-punch", "bg-court", "bg-navy"];
+const TILE_PALETTE = ["bg-volt", "bg-teal", "bg-mint", "bg-ocean"];
 
 export function tileColorForHandle(handle: string) {
   let hash = 0;

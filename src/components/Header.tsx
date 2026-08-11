@@ -10,8 +10,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b-2 border-ink bg-cream/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <Link href="/" className="font-display shout text-3xl tracking-wide text-navy sm:text-4xl">
-          Yell<span className="text-punch">Yeah</span>
+        <Link href="/" className="font-display shout text-3xl tracking-wide text-ocean sm:text-4xl">
+          Yell<span className="text-teal">Yeah</span>
         </Link>
 
         <nav className="hidden items-center gap-8 sm:flex">
@@ -19,7 +19,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-display shout text-xl text-ink transition-colors hover:text-punch"
+              className="font-display shout text-xl text-ink transition-colors hover:text-teal"
             >
               {link.label}
             </Link>
@@ -28,7 +28,7 @@ export default function Header() {
 
         <Link
           href="/shop"
-          className="btn-hard hidden bg-yell px-5 py-2 font-display shout text-lg text-ink sm:inline-block"
+          className="btn-hard hidden bg-volt px-5 py-2 font-display shout text-lg text-ink sm:inline-block"
         >
           Shop Now
         </Link>

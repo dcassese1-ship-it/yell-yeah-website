@@ -7,24 +7,24 @@
 @import "@fontsource/inter/800.css";
 
 :root {
-  --color-ink: #0a1330;
-  --color-navy: #14235c;
+  --color-ink: #041c3a;
+  --color-ocean: #116685;
   --color-paper: #faf6ec;
   --color-cream: #fffdf7;
-  --color-yell: #ffce1a;
-  --color-punch: #ff4d6d;
-  --color-court: #12b886;
-  --color-line: #0a1330;
+  --color-volt: #e6ea4d;
+  --color-teal: #2bbfa6;
+  --color-mint: #a0e6bc;
+  --color-line: #041c3a;
 }
 
 @theme inline {
   --color-ink: var(--color-ink);
-  --color-navy: var(--color-navy);
+  --color-ocean: var(--color-ocean);
   --color-paper: var(--color-paper);
   --color-cream: var(--color-cream);
-  --color-yell: var(--color-yell);
-  --color-punch: var(--color-punch);
-  --color-court: var(--color-court);
+  --color-volt: var(--color-volt);
+  --color-teal: var(--color-teal);
+  --color-mint: var(--color-mint);
   --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
   --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
@@ -57,7 +57,7 @@ body {
 }
 
 .text-outline {
-  -webkit-text-stroke: 2px var(--color-ink);
+  -webkit-text-stroke: 2px var(--color-cream);
   color: transparent;
 }
 
