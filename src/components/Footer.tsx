@@ -24,13 +24,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/shop?tag=tee" className="hover:text-yell">
-                  Tees
+                <Link href="/shop?category=shirt" className="hover:text-yell">
+                  Shirts
                 </Link>
               </li>
               <li>
-                <Link href="/shop?tag=headwear" className="hover:text-yell">
-                  Headwear
+                <Link href="/shop?category=hat" className="hover:text-yell">
+                  Hats
                 </Link>
               </li>
             </ul>
@@ -41,12 +41,17 @@ export default function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-cream/80">
               <li>
                 <Link href="/about" className="hover:text-yell">
-                  About
+                  Story
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-yell">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="hover:text-yell">
+                  Privacy
                 </Link>
               </li>
               <li>

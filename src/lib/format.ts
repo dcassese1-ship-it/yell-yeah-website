@@ -1,11 +1,9 @@
-import { Money } from "./types";
-
-export function formatMoney(money: Money) {
+export function formatMoney(amount: number) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: money.currencyCode || "USD",
+    currency: "USD",
     minimumFractionDigits: 2,
-  }).format(Number(money.amount));
+  }).format(amount);
 }
 
 const TILE_PALETTE = ["bg-yell", "bg-punch", "bg-court", "bg-navy"];

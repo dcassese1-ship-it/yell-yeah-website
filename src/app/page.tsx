@@ -1,10 +1,9 @@
 import Link from "next/link";
 import MarqueeBanner from "@/components/MarqueeBanner";
 import ProductGrid from "@/components/ProductGrid";
-import { getAllProducts } from "@/lib/shopify";
+import { products } from "@/lib/products";
 
-export default async function Home() {
-  const { products } = await getAllProducts();
+export default function Home() {
   const featured = products.slice(0, 4);
 
   return (

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import ProductGrid from "@/components/ProductGrid";
-import { getAllProducts } from "@/lib/shopify";
+import { products } from "@/lib/products";
+import { ProductCategory } from "@/lib/types";
 
-const FILTERS = [
-  { label: "All", tag: undefined },
-  { label: "Tees", tag: "tee" },
-  { label: "Headwear", tag: "headwear" },
+const FILTERS: { label: string; category?: ProductCategory }[] = [
+  { label: "All" },
+  { label: "Shirts", category: "shirt" },
+  { label: "Hats", category: "hat" },
 ];
 
 export const metadata = {
@@ -13,30 +14,23 @@ export const metadata = {
 };
 
 export default async function ShopPage(props: PageProps<"/shop">) {
-  const { tag } = await props.searchParams;
-  const activeTag = typeof tag === "string" ? tag : undefined;
+  const { category } = await props.searchParams;
+  const activeCategory = typeof category === "string" ? category : undefined;
 
-  const { products, live } = await getAllProducts();
-  const filtered = activeTag ? products.filter((p) => p.tags.includes(activeTag)) : products;
+  const filtered = activeCategory ? products.filter((p) => p.category === activeCategory) : products;
 
   return (
     <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8">
       <h1 className="shout font-display text-5xl sm:text-6xl">Shop</h1>
       <p className="mt-2 max-w-xl text-ink/70">
-        Performance apparel and gear, made loud. New print-on-demand designs drop straight to
+        Performance apparel and gear, made loud. Each product ships straight from Printful to
         your door.
       </p>
 
-      {!live && (
-        <p className="mt-4 inline-block border-2 border-ink bg-yell px-3 py-1 text-xs font-semibold">
-          Showing sample catalog — connect Shopify to show live inventory.
-        </p>
-      )}
-
       <div className="mt-8 flex flex-wrap gap-3">
         {FILTERS.map((f) => {
-          const isActive = activeTag === f.tag || (!activeTag && !f.tag);
-          const href = f.tag ? `/shop?tag=${f.tag}` : "/shop";
+          const isActive = activeCategory === f.category || (!activeCategory && !f.category);
+          const href = f.category ? `/shop?category=${f.category}` : "/shop";
           return (
             <Link
               key={f.label}
