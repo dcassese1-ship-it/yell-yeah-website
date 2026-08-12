@@ -1,16 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import HeroBackdrop from "@/components/HeroBackdrop";
 import MarqueeBanner from "@/components/MarqueeBanner";
-import { tileColorForHandle } from "@/lib/format";
-
-const MERCH_SPOTLIGHTS = [
-  { id: "merch-1", caption: "Tag us @yellyeahpickleball" },
-  { id: "merch-2", caption: "Tag us @yellyeahpickleball" },
-  { id: "merch-3", caption: "Tag us @yellyeahpickleball" },
-  { id: "merch-4", caption: "Tag us @yellyeahpickleball" },
-];
 
 const SOCIALS = [
   {
@@ -90,68 +81,6 @@ export default function AboutPage() {
             Shop the Collection
           </Link>
         </div>
-      </section>
-
-      {/* People wearing merch */}
-      <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
-        <h2 className="shout font-display text-4xl sm:text-5xl">Yell Yeah In The Wild</h2>
-        <p className="mt-2 max-w-xl text-ink/70">
-          Real players, real energy. Send us your on-court fits and we&apos;ll feature them here.
-        </p>
-
-        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
-          {MERCH_SPOTLIGHTS.map((spot) => {
-            const tileColor = tileColorForHandle(spot.id);
-            const textOnTile = tileColor === "bg-volt" || tileColor === "bg-mint" ? "text-ink" : "text-cream";
-            return (
-              <div key={spot.id} className="card-hard bg-cream">
-                <div
-                  className={`flex aspect-square w-full items-center justify-center border-b-2 border-ink ${tileColor} ${textOnTile}`}
-                >
-                  <span className="font-display shout text-3xl opacity-90">YY</span>
-                </div>
-                <p className="p-3 text-center text-xs text-ink/70">{spot.caption}</p>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="card-hard flex justify-center bg-cream p-4">
-            <blockquote
-              className="tiktok-embed"
-              cite="https://www.tiktok.com/@yellyeahpickleball/video/7557104493788155167"
-              data-video-id="7557104493788155167"
-              style={{ maxWidth: "605px", minWidth: "325px" }}
-            >
-              <section></section>
-            </blockquote>
-          </div>
-
-          <div className="card-hard flex justify-center bg-cream p-4">
-            <blockquote
-              className="tiktok-embed"
-              cite="https://www.tiktok.com/@yellyeahpickleball/video/7544462924044193038"
-              data-video-id="7544462924044193038"
-              style={{ maxWidth: "605px", minWidth: "325px" }}
-            >
-              <section></section>
-            </blockquote>
-          </div>
-
-          <div className="card-hard flex justify-center bg-cream p-4">
-            <blockquote
-              className="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/p/DUbqW8Ekksj/"
-              data-instgrm-version="14"
-              style={{ maxWidth: "540px", minWidth: "326px" }}
-            >
-              <a href="https://www.instagram.com/p/DUbqW8Ekksj/" />
-            </blockquote>
-          </div>
-        </div>
-        <Script src="https://www.tiktok.com/embed.js" strategy="lazyOnload" />
-        <Script src="https://www.instagram.com/embed.js" strategy="lazyOnload" />
       </section>
 
       {/* Meet the Brand Ambassador */}
