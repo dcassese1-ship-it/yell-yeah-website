@@ -17,7 +17,7 @@ export default async function ProductPage(props: PageProps<"/shop/[handle]">) {
       </Link>
 
       <div className="mt-6 grid gap-10 sm:grid-cols-2">
-        <ProductGallery frontImage={product.frontImage} backImage={product.backImage} title={product.title} />
+        <ProductGallery images={product.images} title={product.title} />
 
         <div>
           <h1 className="shout font-display text-4xl sm:text-5xl">{product.title}</h1>

@@ -8,7 +8,7 @@ export default function ProductCard({ product }: { product: Product }) {
     <Link href={`/shop/${product.handle}`} className="card-hard group block bg-cream">
       <div className="relative aspect-square w-full overflow-hidden border-b-2 border-ink bg-paper">
         <Image
-          src={product.frontImage}
+          src={product.images[0].image}
           alt={product.title}
           fill
           sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
