@@ -116,8 +116,8 @@ export default function AboutPage() {
           })}
         </div>
 
-        <div className="mt-10 flex justify-center">
-          <div className="card-hard bg-cream p-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="card-hard flex justify-center bg-cream p-4">
             <blockquote
               className="tiktok-embed"
               cite="https://www.tiktok.com/@yellyeahpickleball/video/7557104493788155167"
@@ -127,8 +127,31 @@ export default function AboutPage() {
               <section></section>
             </blockquote>
           </div>
+
+          <div className="card-hard flex justify-center bg-cream p-4">
+            <blockquote
+              className="tiktok-embed"
+              cite="https://www.tiktok.com/@yellyeahpickleball/video/7544462924044193038"
+              data-video-id="7544462924044193038"
+              style={{ maxWidth: "605px", minWidth: "325px" }}
+            >
+              <section></section>
+            </blockquote>
+          </div>
+
+          <div className="card-hard flex justify-center bg-cream p-4">
+            <blockquote
+              className="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/DUbqW8Ekksj/"
+              data-instgrm-version="14"
+              style={{ maxWidth: "540px", minWidth: "326px" }}
+            >
+              <a href="https://www.instagram.com/p/DUbqW8Ekksj/" />
+            </blockquote>
+          </div>
         </div>
         <Script src="https://www.tiktok.com/embed.js" strategy="lazyOnload" />
+        <Script src="https://www.instagram.com/embed.js" strategy="lazyOnload" />
       </section>
 
       {/* Meet the Brand Ambassador */}
