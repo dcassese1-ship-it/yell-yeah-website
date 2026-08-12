@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import HeroBackdrop from "@/components/HeroBackdrop";
 import MarqueeBanner from "@/components/MarqueeBanner";
@@ -112,6 +113,41 @@ export default function AboutPage() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* Meet the Brand Ambassador */}
+      <section className="mx-auto max-w-4xl px-5 py-16 sm:px-8">
+        <h2 className="shout font-display text-4xl sm:text-5xl">Meet the Brand Ambassador</h2>
+
+        <div className="mt-8 grid gap-10 sm:grid-cols-2 sm:items-center">
+          <div className="card-hard relative aspect-square w-full overflow-hidden">
+            <Image
+              src="/images/tie-dye-dave.jpg"
+              alt="Tie Dye Dave, Yell Yeah brand ambassador"
+              fill
+              sizes="(min-width: 640px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+
+          <div>
+            <p className="font-display shout text-2xl text-teal">Tie Dye Dave — Brand Ambassador</p>
+            <p className="mt-4 leading-relaxed text-ink/80">
+              Two years ago I reluctantly picked up a paddle — and got hooked instantly. Now
+              I&apos;m on the court every chance I get, catching matches on TV, studying
+              instructional videos, and always working to level up my game. Any chance I get,
+              I&apos;m repping Yell Yeah and hyping up this sport.
+            </p>
+            <a
+              href="https://www.tiktok.com/@tiedyedave"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-hard mt-6 inline-block bg-mint px-5 py-2 font-display shout text-base text-ink"
+            >
+              Follow Tie Dye Dave →
+            </a>
+          </div>
         </div>
       </section>
 
