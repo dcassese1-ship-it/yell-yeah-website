@@ -23,16 +23,6 @@ export default function Footer() {
                   All Products
                 </Link>
               </li>
-              <li>
-                <Link href="/shop?category=shirt" className="hover:text-volt">
-                  Shirts
-                </Link>
-              </li>
-              <li>
-                <Link href="/shop?category=hat" className="hover:text-volt">
-                  Hats
-                </Link>
-              </li>
             </ul>
           </div>
 

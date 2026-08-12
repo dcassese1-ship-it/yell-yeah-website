@@ -1,70 +1,37 @@
 import { Product } from "./types";
 
-/**
- * Placeholder catalog. Fill in `image` (path under /public/products) and
- * `printfulUrl` (the product's direct link on your Printful store) for each
- * item as they go live. Until `printfulUrl` is set, the product card shows
- * a "Link Coming Soon" state instead of linking out.
- */
 export const products: Product[] = [
   {
-    id: "shirt-1",
-    handle: "shirt-1",
-    title: "Shirt One",
-    description: "Placeholder description for Shirt One.",
-    category: "shirt",
-    price: 35,
-    image: "/products/shirt-1.jpg",
-    printfulUrl: "",
+    id: "yellow-tee",
+    handle: "yellow-yell-yeah-tee",
+    title: "Yellow Yell Yeah Tee",
+    description:
+      "Performance crew neck tee in yell yellow with the tie-dye Yell Yeah lockup printed across the back.",
+    price: 38,
+    frontImage: "/images/products/tee-yellow-front.jpg",
+    backImage: "/images/products/tee-yellow-back.jpg",
+    printfulUrl: "https://yellyeah.printful.me/product/yellow-yell-yeah-unisex-performance-crew-neck-t-shirt",
   },
   {
-    id: "shirt-2",
-    handle: "shirt-2",
-    title: "Shirt Two",
-    description: "Placeholder description for Shirt Two.",
-    category: "shirt",
-    price: 35,
-    image: "/products/shirt-2.jpg",
-    printfulUrl: "",
+    id: "white-tee",
+    handle: "white-yell-yeah-tee",
+    title: "White Yell Yeah Tee",
+    description:
+      "Performance crew neck tee in white with the tie-dye Yell Yeah lockup printed across the back.",
+    price: 38,
+    frontImage: "/images/products/tee-white-front.jpg",
+    backImage: "/images/products/tee-white-back.jpg",
+    printfulUrl: "https://yellyeah.printful.me/product/unisex-performance-crew-neck-t-shirt-6a7b8142786c2",
   },
   {
-    id: "shirt-3",
-    handle: "shirt-3",
-    title: "Shirt Three",
-    description: "Placeholder description for Shirt Three.",
-    category: "shirt",
-    price: 35,
-    image: "/products/shirt-3.jpg",
-    printfulUrl: "",
-  },
-  {
-    id: "shirt-4",
-    handle: "shirt-4",
-    title: "Shirt Four",
-    description: "Placeholder description for Shirt Four.",
-    category: "shirt",
-    price: 35,
-    image: "/products/shirt-4.jpg",
-    printfulUrl: "",
-  },
-  {
-    id: "hat-1",
-    handle: "hat-1",
-    title: "Hat One",
-    description: "Placeholder description for Hat One.",
-    category: "hat",
-    price: 22,
-    image: "/products/hat-1.jpg",
-    printfulUrl: "",
-  },
-  {
-    id: "hat-2",
-    handle: "hat-2",
-    title: "Hat Two",
-    description: "Placeholder description for Hat Two.",
-    category: "hat",
-    price: 22,
-    image: "/products/hat-2.jpg",
-    printfulUrl: "",
+    id: "black-tee",
+    handle: "black-yell-yeah-tee",
+    title: "Black Yell Yeah Tee",
+    description:
+      "Performance crew neck tee in black with the tie-dye Yell Yeah lockup printed across the back.",
+    price: 38,
+    frontImage: "/images/products/tee-black-front.jpg",
+    backImage: "/images/products/tee-black-back.jpg",
+    printfulUrl: "https://yellyeah.printful.me/product/unisex-performance-crew-neck-t-shirt",
   },
 ];
