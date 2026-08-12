@@ -59,7 +59,7 @@ export default function Home() {
         <ProductGrid products={featured} />
       </section>
 
-      <MarqueeBanner tone="light" items={["FREE SHIPPING $75+", "NEW PRINTFUL DROP COMING SOON", "MADE FOR LOUD PLAYERS"]} />
+      <MarqueeBanner tone="light" items={["MADE FOR LOUD PLAYERS"]} />
 
       {/* Brand story teaser */}
       <section className="border-t-2 border-ink bg-ocean py-16 text-cream">
