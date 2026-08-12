@@ -59,8 +59,6 @@ export default function Home() {
         <ProductGrid products={featured} />
       </section>
 
-      <MarqueeBanner tone="light" items={["MADE FOR LOUD PLAYERS"]} />
-
       {/* Brand story teaser */}
       <section className="border-t-2 border-ink bg-ocean py-16 text-cream">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:grid-cols-2 sm:px-8">
