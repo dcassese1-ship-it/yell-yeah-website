@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import HeroBackdrop from "@/components/HeroBackdrop";
 import MarqueeBanner from "@/components/MarqueeBanner";
 import { tileColorForHandle } from "@/lib/format";
@@ -114,6 +115,20 @@ export default function AboutPage() {
             );
           })}
         </div>
+
+        <div className="mt-10 flex justify-center">
+          <div className="card-hard bg-cream p-4">
+            <blockquote
+              className="tiktok-embed"
+              cite="https://www.tiktok.com/@yellyeahpickleball/video/7557104493788155167"
+              data-video-id="7557104493788155167"
+              style={{ maxWidth: "605px", minWidth: "325px" }}
+            >
+              <section></section>
+            </blockquote>
+          </div>
+        </div>
+        <Script src="https://www.tiktok.com/embed.js" strategy="lazyOnload" />
       </section>
 
       {/* Meet the Brand Ambassador */}
